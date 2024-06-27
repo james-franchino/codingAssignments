@@ -9,6 +9,8 @@ public class codingAssignment {
         int result = ages[ages.length - 1] - ages[0];
         System.out.println(result);
 
+        System.out.println("-------------------------------------------");
+
         // 1b. Create int array ages2 with 9 elements
         int[] ages2 = new int[9];
         // 1b.1 add 9 elements to ages2 (I'm using the numbers from above and adding another)
@@ -22,9 +24,12 @@ public class codingAssignment {
         ages2[7] = 93;
         ages2[8] = 7;
 
+
         // 1b.2 Repeating subtraction from 1a
         int result2 = ages2[ages2.length - 1] - ages2[0];
         System.out.println(result2);
+
+        System.out.println("-------------------------------------------");
 
         // 1b.3 Proving that using index values is dynamic. I will create a method to subtract the first element
         // from the last of an array. Results below
@@ -39,6 +44,8 @@ public class codingAssignment {
         System.out.println(result5);
 
         // Method successfully runs on arrays of any size
+
+        System.out.println("-------------------------------------------");
 
         // 1c. Create a loop to iterate through the array and find the average ages
 
@@ -56,6 +63,8 @@ public class codingAssignment {
         // 2.  Create String array names
         String[] names = {"Sam", "Tommy", "Tim", "Jack", "Sally", "Buck", "Bob"};
 
+        System.out.println("-------------------------------------------");
+
         // 2.a Calculate average number of letters per name using a loop
         int totalLetters = 0;
         for (String name : names) {
@@ -64,6 +73,8 @@ public class codingAssignment {
         // calculate the average
         double averageLetters = totalLetters / names.length;
         System.out.println(averageLetters);
+
+        System.out.println("-------------------------------------------");
 
         // 2.b Use a loop to iterate through the array again and concatenate all the names together,
         // separated by spaces, and print the result to the console.
@@ -190,11 +201,12 @@ public class codingAssignment {
     }
     // Methods
 
-    // This method subtracts the first element from the last
+    // 1b.3 This method subtracts the first element from the last
     public static int subtractFirstLast(int[] array) {
+
         return array[array.length - 1] - array[0];
     }
-    // This method takes a String word and an int n as parameters. It uses a StringBuilder
+    // 7. This method takes a String word and an int n as parameters. It uses a StringBuilder
     // to concatenate the word to itself n times
 
     public static String concatWords(String word, int n) {
@@ -205,14 +217,15 @@ public class codingAssignment {
         return concatenatedWord.toString();
     }
 
-    // This method takes two Strings; firstName, and lastName and returns a full name
+    // 8. This method takes two Strings; firstName, and lastName and returns a full name
     // (firstName + " " + lastName)
     // StringBuilder allows us to append the string fullName rather than the need to create new strings
     // for each full name
     public static String fullName(String firstName, String lastName) {
+
         return firstName + " " + lastName;
     }
-    // This method takes an array of int called array and initializes a variable sum 0 to store the sum of the
+    // 9. This method takes an array of int called array and initializes a variable sum 0 to store the sum of the
     // array elements. It then returns true if the sum is over 100 and false if it is not.
     public static boolean greaterThan(int[] array) {
         int sum = 0;
@@ -221,7 +234,7 @@ public class codingAssignment {
         }
         return sum > 100;
     }
-    // This method takes an array and sums the numbers inside and then calculates the average
+    // 10. This method takes an array and sums the numbers inside and then calculates the average
     static public double doubleAverage(double[] array) {
         double sums = 0;
         for (double num: array) {
@@ -230,7 +243,7 @@ public class codingAssignment {
         return sums / array.length;
     }
 
-    // This method is very similar to the last method except that it takes in 2 arrays, determines the sum of
+    // 11. This method is very similar to the last method except that it takes in 2 arrays, determines the sum of
     // each and the average of each and then compares the averages to see, which is larger. Returns true
     // if the first array is larger.
     public static boolean firstOrSecondArray (double[] array1, double[] array2) {
@@ -248,7 +261,8 @@ public class codingAssignment {
 
         return average1 > average2;
     }
-
+    // 12. This is a simple boolean checking if it's hot out AND if you have enough money.
+    // If yes to both it returns true.
     public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
         return isHotOutside && moneyInPocket > 10.50;
     }
